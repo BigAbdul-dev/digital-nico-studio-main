@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>FAQs — DN Studios | Design Questions Answered</title>
+  <meta name="description" content="Answers to common questions about DN Studios design services, turnaround time, pricing, process, and more.">
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- GLOBAL VARIABLES (Light + Dark) ---------- */
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f5f7fc;
+      --text-primary: #0a0a0a;
+      --text-secondary: #2c2c2c;
+      --text-muted: #5a5a5a;
+      --card-bg: rgba(255,255,255,0.7);
+      --border-light: rgba(0,0,0,0.05);
+      --accent: #0a66c2;
+      --accent-glow: rgba(10,102,194,0.25);
+      --header-bg: rgba(255,255,255,0.85);
+      --shadow-glass: 0 8px 32px rgba(0,0,0,0.05);
+      --hero-overlay: linear-gradient(125deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 100%);
+    }
+    body.dark {
+      --bg-primary: #050505;
+      --bg-secondary: #0f0f14;
+      --text-primary: #f0f0f0;
+      --text-secondary: #d0d0d0;
+      --text-muted: #a0a0a0;
+      --card-bg: rgba(20,20,28,0.75);
+      --border-light: rgba(255,255,255,0.08);
+      --accent: #3b82f6;
+      --accent-glow: rgba(59,130,246,0.4);
+      --header-bg: rgba(10,10,10,0.85);
+      --shadow-glass: 0 8px 32px rgba(0,0,0,0.3);
+      --hero-overlay: linear-gradient(125deg, rgba(0,0,0,0.85), rgba(0,0,0,0.65));
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    
+    /* ---------- STICKY GLASS NAVBAR (IDENTICAL TO INDEX) ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: 0.3s;
+    }
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo img { height: 48px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+    .nav-link {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: 0.2s;
+    }
+    .nav-link:hover { color: var(--accent); }
+    .nav-link.active { color: var(--accent); font-weight: 600; }
+    .hire-btn {
+      background: var(--accent);
+      color: white !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 600;
+      animation: subtlePulse 2s infinite;
+      transition: transform 0.2s;
+    }
+    .hire-btn:hover { transform: scale(1.03); background: #004e9e; }
+    @keyframes subtlePulse {
+      0% { box-shadow: 0 0 0 0 rgba(10,102,194,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(10,102,194,0); }
+      100% { box-shadow: 0 0 0 0 rgba(10,102,194,0); }
+    }
+    .theme-toggle {
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      font-size: 1.3rem;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-menu-btn { display: none; font-size: 1.7rem; cursor: pointer; background: none; border: none; color: var(--text-primary); }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    
+    /* FAQ Hero Section */
+    .faq-hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #1e2a3a 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .faq-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .faq-hero .lead {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* FAQ Section Styling */
+    .faq-section {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+    .faq-grid {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px -10px var(--accent-glow);
+    }
+    .faq-question {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: left;
+      transition: background 0.2s;
+    }
+    .faq-question:hover {
+      background: rgba(var(--accent-rgb, 10,102,194), 0.05);
+    }
+    .q-text .title {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .q-text .meta {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+    .chevron {
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+      color: var(--accent);
+    }
+    .faq-item.open .chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      padding: 0 2rem;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      border-top: 0px solid var(--border-light);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 2rem 1.8rem 2rem;
+      border-top-width: 1px;
+      border-top-color: var(--border-light);
+    }
+    .faq-answer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .faq-answer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* CTA mini */
+    .faq-cta {
+      background: var(--bg-secondary);
+      border-radius: 28px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .faq-cta h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .cta-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: transform 0.2s;
+    }
+    .cta-wa-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Footer (enhanced) */
+    .site-footer {
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: auto;
+    }
+    body:not(.dark) .site-footer {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+      animation: shimmer 20s infinite linear;
+      pointer-events: none;
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(50%); }
+    }
+    .footer-wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+      background-size: 200% 100%;
+      animation: waveFlow 3s ease infinite;
+    }
+    @keyframes waveFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3rem;
+      padding: 3rem 0 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-copyright p {
+      margin: 0.5rem 0;
+      color: #a0aec0;
+      font-size: 0.875rem;
+    }
+    body:not(.dark) .footer-copyright p { color: #4a5568; }
+    .phone-link {
+      color: #a0aec0;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .phone-link:hover { color: #48bb78; }
+    .footer-tagline {
+      color: #718096;
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e0;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    body:not(.dark) .social-link {
+      background: rgba(0, 0, 0, 0.05);
+      color: #4a5568;
+    }
+    .social-link:hover { transform: translateY(-3px); }
+    .social-link.whatsapp:hover { color: #25D366; background: rgba(37, 211, 102, 0.1); }
+    .social-link.twitter:hover { color: #1DA1F2; background: rgba(29, 161, 242, 0.1); }
+    .social-link.email:hover { color: #EA4335; background: rgba(234, 67, 53, 0.1); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 2rem;
+      text-align: center;
+    }
+    .footer-heart {
+      color: #718096;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .heart-icon {
+      color: #f56565;
+      animation: heartbeat 1.5s ease infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: var(--header-bg);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        transition: left 0.3s;
+        z-index: 999;
+      }
+      .nav-links.show-nav { left: 0; }
+      .mobile-menu-btn { display: block; }
+      .footer-main { flex-direction: column; text-align: center; align-items: center; }
+      .social-links { justify-content: center; }
+      .faq-question { padding: 1.2rem 1.5rem; }
+      .faq-item.open .faq-answer { padding: 0 1.5rem 1.5rem 1.5rem; }
+      .faq-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- EXACT SAME NAVBAR AS INDEX.HTML (consistent across all pages) -->
+  <header class="site-header">
+    <div class="header-flex container">
+      <div class="logo"><a href="index.html"><img src="assets/logo_main.png" alt="DN Studios Logo"></a></div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="faqs.html" class="nav-link active">FAQs</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="theme-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+        <a href="https://wa.me/2349045217063" class="nav-link hire-btn" target="_blank">Hire Us</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p class="lead">Everything you need to know about working with DN Studios — from turnaround time to custom design process.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion List -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-grid">
+          <!-- FAQ 1 -->
+          <div class="faq-item open" id="faq1">
+            <button class="faq-question" aria-expanded="true">
+              <div class="q-text">
+                <span class="title">What services does DN Studios offer?</span>
+                <span class="meta">Logo, Brand Identity, Flyers, Social Graphics, Church Branding & more</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              We specialize in <strong>conversion-focused design</strong>: Logo & Brand Identity, Church & Ministry Flyers, Social Media Graphics, Event Posters, Product Ads, and full visual branding. Every design is 100% custom — no templates. Our goal is to help you show up powerfully online and offline.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">How fast is your turnaround time?</span>
+                <span class="meta">24–48 hours for most projects</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              ⚡ We guarantee <strong>24–48 hour delivery</strong> for standard projects like flyers, logos, and social graphics. Complex brand packages may take 3–5 days, but we always communicate a clear timeline upfront. Rush options available — just ask!
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">What are your rates? How do I get a quote?</span>
+                <span class="meta">Custom pricing based on your needs</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Every project is unique, so we provide <strong>custom quotes</strong> after understanding your brand vision. Prices start from affordable packages for startups and scale with complexity. <a href="https://wa.me/2349045217063?text=Hi%20Nicodemus,%20I%20need%20a%20quote%20for%20design" target="_blank">Chat with Nicodemus on WhatsApp</a> for a free, no-obligation estimate.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">Do you offer revisions?</span>
+                <span class="meta">Unlimited revisions until you're 100% satisfied</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely! Your satisfaction is our priority. We offer <strong>unlimited revisions</strong> on all designs until you love the final result. We work closely with you to refine every detail.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">How do I start a project with DN Studios?</span>
+                <span class="meta">Simple 3-step process</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <strong>1.</strong> Reach out via WhatsApp or email with your project idea.<br>
+              <strong>2.</strong> We'll discuss your brand, goals, and timeline (free consultation).<br>
+              <strong>3.</strong> After approval & deposit, we start designing — delivering within 24–48h.<br>
+              <a href="https://wa.me/2349045217063?text=Hello!%20I%20want%20to%20start%20a%20design%20project" target="_blank">Click here to start →</a>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">Do you design for churches and ministries?</span>
+                <span class="meta">Specialized church branding & event flyers</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes! DN Studios has deep experience with <strong>church & ministry design</strong> — from convention flyers, worship night posters, sermon series graphics, to complete church visual identity. We understand the heart behind ministry communication.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <div class="q-text">
+                <span class="title">What file formats will I receive?</span>
+                <span class="meta">PNG, JPG, PDF, source files (AI/PSD) on request</span>
+              </div>
+              <span class="chevron" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              You'll receive high-resolution print-ready files (PDF, JPG, PNG) and optimized web formats. Editable source files (Illustrator, Photoshop, Canva) are available upon request. We ensure you have everything you need for both print and digital use.
+            </div>
+          </div>
+
+          <!-- Extra CTA inside FAQ -->
+          <div class="faq-cta">
+            <h3>Still have questions?</h3>
+            <p>Nicodemus is online and ready to help — typically replies within minutes.</p>
+            <a href="https://wa.me/2349045217063?text=Hi%20Nicodemus,%20I%20have%20a%20question%20about%20DN%20Studios" class="cta-wa-btn" target="_blank">
+              <i class="fab fa-whatsapp fa-lg"></i> Ask on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Enhanced Footer -->
+  <footer class="site-footer">
+    <div class="footer-wave"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-copyright">
+          <p>© 2025 DN Studios — Design by <strong>Nicodemus Emmanuel</strong></p>
+          <p>© 2026 <strong>Prosper Technologies</strong> | <a href="tel:09034388861" class="phone-link"><i class="fas fa-phone-alt"></i> 0903 438 8861</a></p>
+          <div class="footer-tagline"><i class="fas fa-quote-left"></i> Designs that actually work for your business</div>
+        </div>
+        <div class="footer-social">
+          <div class="social-links">
+            <a href="https://wa.me/2349045217063" target="_blank" class="social-link whatsapp" data-tooltip="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/digital_nico25" target="_blank" class="social-link twitter" data-tooltip="X (Twitter)" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:nicodemusemmanuel305@gmail.com" class="social-link email" data-tooltip="Email" aria-label="Email"><i class="far fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-heart">
+          <span>Crafted with</span> <i class="fas fa-heart heart-icon"></i> <span>for exceptional digital experiences</span>
+          <span class="footer-year">✦ 2025-2026 ✦</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Dark Mode Toggle
+      const toggleBtn = document.getElementById('darkModeToggle');
+      const body = document.body;
+      function setTheme(theme) {
+        if(theme === 'dark') {
+          body.classList.add('dark');
+          if(toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+          localStorage.setItem('dn_theme', 'dark');
+        } else {
+          body.classList.remove('dark');
+          if(toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem('dn_theme', 'light');
+        }
+      }
+      const savedTheme = localStorage.getItem('dn_theme');
+      if(savedTheme === 'dark') setTheme('dark');
+      else if(savedTheme === 'light') setTheme('light');
+      else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+      else setTheme('light');
+      
+      if(toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          if(body.classList.contains('dark')) setTheme('light');
+          else setTheme('dark');
+        });
+      }
+      
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          if(!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          } else {
+            item.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+      
+      // Mobile menu toggle (same as index)
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.getElementById('navLinks');
+      if(mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => navLinks.classList.toggle('show-nav'));
+        document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('show-nav')));
+      }
+    })();
+  </script>
+</body>
+</html>
