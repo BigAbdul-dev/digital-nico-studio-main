@@ -596,19 +596,19 @@ body {
 <body>
    <header class="site-header">
   <div class="header-flex container">
-    <div class="logo"><a href="index.html"><img src="assets/logo_main.png" alt="DN Studios Logo"></a></div>
+    <div class="logo"><a href="../index.html"><img src="../assets/logo_main.png" alt="DN Studios Logo"></a></div>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="index.html#services" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        
-        <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        <li><a href="faqs.html" class="nav-link active">faqs</a></li>
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="../designing-with-ai.html" class="nav-link">AI Design</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        <li><a href="../faqs.html" class="nav-link">FAQs</a></li>
       </ul>
     </nav>
     <div class="header-right">
-      <button class="theme-toggle" id="darkModeToggle"><img src="assets/icon_moon.svg" alt="Dark Mode"></button>
+      <button class="theme-toggle" id="darkModeToggle"><img src="../assets/icon_moon.svg" alt="Dark Mode"></button>
       <a href="https://wa.me/2349045217063" class="nav-link hire-btn" target="_blank">Hire Us</a>
       <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
     </div>
@@ -626,17 +626,240 @@ body {
       <h2>Security</h2>
       <p>All client files and project details are kept confidential.</p>
       <h2>Third Parties</h2>
-      <p>We use platforms like WhatsApp and X (Twitter) – their own privacy policies apply.</p>
+      <p>We use platforms like WhatsApp and X (Twitter) â€“ their own privacy policies apply.</p>
       <h2>User Rights</h2>
       <p>Clients can request access, updates, or deletion of their info after project completion.</p>
       <h2>Contact for Privacy</h2>
       <p>WhatsApp: <a href="https://wa.me/2349045217063">09045217063</a> or Email: <a href="mailto:nicodemusemmanuel305@gmail.com">nicodemusemmanuel305@gmail.com</a></p>
-      <p><a href="../index.html" class="btn btn-primary" style="margin-top: 2rem;">← Back to Home</a></p>
+      <p><a href="../index.html" class="btn btn-primary" style="margin-top: 2rem;">â† Back to Home</a></p>
     </div>
   </main>
   <footer class="site-footer">
     <div class="container"><p class="footer-tagline">Designs that actually work for your business</p></div>
   </footer>
   <script src="../js/script.js"></script>
+
+  <!-- ======= AI COURSE POPUP + ENHANCEMENTS ======= -->
+  <style>
+    .dn-ai-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 1000001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .dn-ai-popup.show { opacity: 1; visibility: visible; }
+    .dn-ai-popup-card {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1);
+    }
+    .dn-ai-popup.show .dn-ai-popup-card { transform: translateY(0) scale(1); }
+    .dn-ai-popup-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .dn-ai-popup-close:hover { background: rgba(0,0,0,0.6); }
+    .dn-ai-popup-media { position: relative; }
+    .dn-ai-popup-media img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .dn-ai-popup-badge {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      box-shadow: 0 6px 14px rgba(37,211,102,0.4);
+    }
+    .dn-ai-popup-body { padding: 1.5rem; }
+    .dn-ai-popup-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .dn-ai-popup-body h3 { font-size: 1.6rem; font-weight: 800; margin: 0.35rem 0 0.5rem; }
+    .dn-ai-popup-body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+    .dn-ai-popup-features { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+    .dn-ai-popup-features span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(10,102,194,0.08);
+      color: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dn-ai-popup-actions { display: flex; gap: 0.8rem; margin-top: 1.1rem; }
+    .dn-ai-popup-apply {
+      flex: 1;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 50px;
+      transition: transform 0.2s, filter 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .dn-ai-popup-apply:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .dn-ai-popup-cancel {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .dn-ai-popup-cancel:hover { border-color: var(--accent); color: var(--accent); }
+    .dn-ai-launcher {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      z-index: 9000;
+      background: linear-gradient(135deg, #f5c542 0%, #f0a500 100%);
+      color: #0b1f33;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(245,197,66,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .dn-ai-launcher:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,197,66,0.55); }
+    .dn-back-top {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(90px);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 8000;
+      box-shadow: 0 8px 20px var(--accent-glow);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dn-back-top.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    @media (max-width: 520px) {
+      .dn-ai-popup-media img { height: 170px; }
+      .dn-ai-popup-actions { flex-direction: column; }
+      .dn-ai-launcher { left: 16px; bottom: 16px; padding: 0.6rem 0.9rem; }
+    }
+  </style>
+
+  <div class="dn-ai-popup" id="dnAiPopup" role="dialog" aria-modal="true" aria-labelledby="dnAiPopupTitle">
+    <div class="dn-ai-popup-card">
+      <button class="dn-ai-popup-close" id="dnAiPopupClose" aria-label="Close">&times;</button>
+      <div class="dn-ai-popup-media">
+        <img src="../assets/invest.jpg" alt="Designing With AI course">
+        <span class="dn-ai-popup-badge"><i class="fas fa-wallet"></i> â‚¦3,250 only</span>
+      </div>
+      <div class="dn-ai-popup-body">
+        <span class="dn-ai-popup-eyebrow">DN Studios Â· New Course</span>
+        <h3 id="dnAiPopupTitle">Designing With AI</h3>
+        <p>Learn to create scroll-stopping designs with AI â€” no experience needed, just your phone. Limited slots, instant WhatsApp access.</p>
+        <div class="dn-ai-popup-features">
+          <span><i class="fas fa-users"></i> 30 slots available</span>
+          <span><i class="fas fa-bolt"></i> 24-48h delivery</span>
+        </div>
+        <div class="dn-ai-popup-actions">
+          <a href="../designing-with-ai.html" class="dn-ai-popup-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+          <button class="dn-ai-popup-cancel" id="dnAiPopupCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="dn-ai-launcher" id="dnAiLauncher" aria-label="Designing with AI course"><i class="fas fa-robot"></i> Designing with AI</button>
+
+  <button class="dn-back-top" id="dnBackTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    (function() {
+      var popup = document.getElementById('dnAiPopup');
+      var launcher = document.getElementById('dnAiLauncher');
+      var closeBtn = document.getElementById('dnAiPopupClose');
+      var cancelBtn = document.getElementById('dnAiPopupCancel');
+      var KEY = 'dn_ai_popup_seen';
+      function showPopup() { if (popup) { popup.classList.add('show'); document.body.style.overflow = 'hidden'; } }
+      function hidePopup() {
+        if (!popup) return;
+        popup.classList.remove('show');
+        document.body.style.overflow = '';
+        try { sessionStorage.setItem(KEY, '1'); } catch(e) {}
+      }
+      if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+      if (cancelBtn) cancelBtn.addEventListener('click', hidePopup);
+      if (popup) popup.addEventListener('click', function(e) { if (e.target === popup) hidePopup(); });
+      if (launcher) launcher.addEventListener('click', showPopup);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popup && popup.classList.contains('show')) hidePopup(); });
+      var dismissed = false;
+      try { dismissed = sessionStorage.getItem(KEY) === '1'; } catch(e) {}
+      if (!dismissed) setTimeout(showPopup, 1800);
+
+      var backTop = document.getElementById('dnBackTop');
+      if (backTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) backTop.classList.add('show');
+          else backTop.classList.remove('show');
+        }, { passive: true });
+        backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      }
+    })();
+  </script>
 </body>
 </html>

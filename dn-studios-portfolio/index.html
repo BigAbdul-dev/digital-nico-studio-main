@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>DN Studios | Premium Creative Agency – Design that Converts</title>
+  <title>DN Studios | Premium Creative Agency â€“ Design that Converts</title>
   <meta name="description" content="DN Studios delivers conversion-focused design within 24-48h. Brand identity, flyers, social graphics for businesses & ministries. WhatsApp 09045217063.">
   <!-- Google Fonts + Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -107,6 +107,10 @@
       align-items: center;
       justify-content: center;
     }
+    .theme-toggle img { width: 20px; height: 20px; }
+    .theme-toggle .icon-sun { display: none; }
+    body.dark .theme-toggle .icon-moon { display: none; }
+    body.dark .theme-toggle .icon-sun { display: inline-block; }
     .mobile-menu-btn { display: none; font-size: 1.7rem; cursor: pointer; background: none; border: none; color: var(--text-primary); }
     .header-right { display: flex; align-items: center; gap: 1rem; }
 
@@ -454,12 +458,13 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="index.html#services" class="nav-link">Services</a></li>
           <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="designing-with-ai.html" class="nav-link">AI Design</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
           <li><a href="faqs.html" class="nav-link">FAQs</a></li>
         </ul>
       </nav>
       <div class="header-right">
-        <button class="theme-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+        <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle theme"><img class="icon-moon" src="assets/icon_moon.svg" alt="Dark mode"><img class="icon-sun" src="assets/icon_sun.svg" alt="Light mode"></button>
         <a href="https://wa.me/2349045217063" class="nav-link hire-btn" target="_blank">Hire Us</a>
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
       </div>
@@ -497,7 +502,7 @@
       <div class="container">
         <div class="reveal" style="text-align: center;"><span class="section-tag">Why Clients Love DN</span><h2>Speed. Strategy. Soul.</h2></div>
         <div class="cards-glass">
-          <div class="glass-card reveal"><i class="fas fa-bolt"></i><h3>Fast Turnaround</h3><p>24–48 hours delivery without cutting corners.</p><div class="tooltip-text">Rush projects welcome</div></div>
+          <div class="glass-card reveal"><i class="fas fa-bolt"></i><h3>Fast Turnaround</h3><p>24â€“48 hours delivery without cutting corners.</p><div class="tooltip-text">Rush projects welcome</div></div>
           <div class="glass-card reveal"><i class="fas fa-chart-line"></i><h3>Conversion-Focused</h3><p>Design that drives engagement & sales.</p><div class="tooltip-text">Data-driven aesthetics</div></div>
           <div class="glass-card reveal"><i class="fas fa-magic"></i><h3>Custom/Tailored</h3><p>Every visual is uniquely yours.</p><div class="tooltip-text">Zero templates</div></div>
         </div>
@@ -529,7 +534,7 @@
           <div class="preview-card stagger-load"><img src="assets/samples_party_01.jpg" alt="Party Events"><div class="card-caption">Party/Events</div></div>
           <div class="preview-card stagger-load"><img src="assets/samples_brands_01.jpg" alt="Brand Identity"><div class="card-caption">Brand Identity</div></div>
         </div>
-        <div style="text-align: center; margin-top: 2rem;"><a href="portfolio.html" class="btn-primary">View full gallery →</a></div>
+        <div style="text-align: center; margin-top: 2rem;"><a href="portfolio.html" class="btn-primary">View full gallery â†’</a></div>
       </div>
     </section>
 
@@ -543,30 +548,55 @@
         <div class="reviews-grid">
           <div class="review-card">
             <div class="review-header">
-              <img src="assets/reviews_01.jpeg" alt="Sarah Johnson" class="review-avatar" onerror="this.src='https://randomuser.me/api/portraits/women/68.jpg'">
+              <img src="assets/samples_reveiws_01.jpeg" alt="Sarah Johnson" class="review-avatar">
               <div class="reviewer-info"><h4>Sarah Johnson</h4><div class="reviewer-title">Founder, Bloom Cosmetics</div></div>
             </div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">“DN Studios designed our entire brand identity. The logo and social templates are breathtaking. Our engagement skyrocketed!”</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <div class="review-text">â€œDN Studios designed our entire brand identity. The logo and social templates are breathtaking. Our engagement skyrocketed!â€</div>
             <span class="review-project"><i class="fas fa-trademark"></i> Brand Identity Package</span>
           </div>
           <div class="review-card">
             <div class="review-header">
-              <img src="assets/reviews_02.jpeg" alt="Michael Ogunlesi" class="review-avatar" onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'">
+              <img src="assets/samples_reveiws_02.jpeg" alt="Michael Ogunlesi" class="review-avatar">
               <div class="reviewer-info"><h4>Michael Ogunlesi</h4><div class="reviewer-title">Lead Pastor, The Light Church</div></div>
             </div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">“Our convention flyers were a huge success. DN delivered 48 hours early. The designs were anointed and professional!”</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <div class="review-text">â€œOur convention flyers were a huge success. DN delivered 48 hours early. The designs were anointed and professional!â€</div>
             <span class="review-project"><i class="fas fa-church"></i> Ministry Flyers</span>
           </div>
           <div class="review-card">
             <div class="review-header">
-              <img src="assets/reviews_03.jpeg" alt="Precious Adeyemi" class="review-avatar" onerror="this.src='https://randomuser.me/api/portraits/women/45.jpg'">
+              <img src="assets/samples_reveiws_03.jpeg" alt="Precious Adeyemi" class="review-avatar">
               <div class="reviewer-info"><h4>Precious Adeyemi</h4><div class="reviewer-title">Creative Director, AfriTales</div></div>
             </div>
-            <div class="stars">★★★★★</div>
-            <div class="review-text">“Social media graphics that felt fresh and African-centered. Our engagement doubled in two weeks. Unmatched speed!”</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <div class="review-text">â€œSocial media graphics that felt fresh and African-centered. Our engagement doubled in two weeks. Unmatched speed!â€</div>
             <span class="review-project"><i class="fas fa-hashtag"></i> Social Media Campaign</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Course Highlight -->
+    <section class="why-section reveal" id="ai-course">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-secondary) 100%); border: 1px solid var(--border-light); border-radius: 32px; padding: 2rem; overflow: hidden;">
+          <div style="flex: 1; min-width: 280px;">
+            <img src="assets/invest.jpg" alt="Designing With AI course" style="width: 100%; max-height: 340px; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow-glass); border: 4px solid var(--accent);">
+          </div>
+          <div style="flex: 1.2; min-width: 280px;">
+            <span class="section-tag">New Course Â· Limited Slots</span>
+            <h2 style="margin: 0.8rem 0 0.5rem;">Learn <span style="color: var(--accent);">Designing With AI</span></h2>
+            <p style="color: var(--text-muted); margin-bottom: 0.5rem;">No experience needed. Just your phone. Master AI design tools, prompt engineering and monetize your skills â€” delivered in a practical, beginner-friendly format.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.2rem 0; font-weight: 600;">
+              <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fas fa-graduation-cap" style="color: var(--accent);"></i> 8 practical modules</span>
+              <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fas fa-mobile-alt" style="color: var(--accent);"></i> Learn from your phone</span>
+              <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fas fa-wallet" style="color: var(--accent);"></i> â‚¦3,250 only</span>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="designing-with-ai.html" class="btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+              <a href="designing-with-ai.html" style="border: 2px solid var(--accent); color: var(--accent); padding: 0.7rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600;">View Curriculum</a>
+            </div>
           </div>
         </div>
       </div>
@@ -594,8 +624,8 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-copyright">
-          <p>© 2025 DN Studios — Design by <strong>Nicodemus Emmanuel</strong></p>
-          <p>© 2026 <strong>Prosper Technologies</strong> | <a href="tel:09034388861" class="phone-link"><i class="fas fa-phone-alt"></i> 0903 438 8861</a></p>
+          <p>Â© 2025 DN Studios â€” Design by <strong>Nicodemus Emmanuel</strong></p>
+          <p>Â© 2026 <strong>Prosper Technologies</strong> | <a href="tel:09034388861" class="phone-link"><i class="fas fa-phone-alt"></i> 0903 438 8861</a></p>
           <div class="footer-tagline"><i class="fas fa-quote-left"></i> Designs that actually work for your business</div>
         </div>
         <div class="footer-social">
@@ -607,7 +637,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-heart"><span>Crafted with</span> <i class="fas fa-heart heart-icon"></i> <span>for exceptional digital experiences</span> <span class="footer-year">✦ 2025-2026 ✦</span></div>
+        <div class="footer-heart"><span>Crafted with</span> <i class="fas fa-heart heart-icon"></i> <span>for exceptional digital experiences</span> <span class="footer-year">âœ¦ 2025-2026 âœ¦</span></div>
       </div>
     </div>
   </footer>
@@ -620,11 +650,9 @@
       const setTheme = (theme) => {
         if(theme === 'dark') {
           body.classList.add('dark');
-          if(toggle) toggle.innerHTML = '<i class="fas fa-sun"></i>';
           localStorage.setItem('dn_theme', 'dark');
         } else {
           body.classList.remove('dark');
-          if(toggle) toggle.innerHTML = '<i class="fas fa-moon"></i>';
           localStorage.setItem('dn_theme', 'light');
         }
       };
@@ -675,6 +703,237 @@
         const updateCounter = () => { if(count < target) { count += 7; projectsSpan.innerText = count + '+'; setTimeout(updateCounter, 20); } else projectsSpan.innerText = target + '+'; };
         const statObserver = new IntersectionObserver((entries) => { if(entries[0].isIntersecting) { updateCounter(); statObserver.disconnect(); } }, { threshold: 0.5 });
         statObserver.observe(projectsSpan);
+      }
+    })();
+  </script>
+
+  <!-- ======= AI COURSE POPUP + ENHANCEMENTS ======= -->
+  <style>
+    /* AI Course Popup */
+    .dn-ai-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 1000001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .dn-ai-popup.show { opacity: 1; visibility: visible; }
+    .dn-ai-popup-card {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1);
+    }
+    .dn-ai-popup.show .dn-ai-popup-card { transform: translateY(0) scale(1); }
+    .dn-ai-popup-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .dn-ai-popup-close:hover { background: rgba(0,0,0,0.6); }
+    .dn-ai-popup-media { position: relative; }
+    .dn-ai-popup-media img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .dn-ai-popup-badge {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      box-shadow: 0 6px 14px rgba(37,211,102,0.4);
+    }
+    .dn-ai-popup-body { padding: 1.5rem; }
+    .dn-ai-popup-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .dn-ai-popup-body h3 { font-size: 1.6rem; font-weight: 800; margin: 0.35rem 0 0.5rem; }
+    .dn-ai-popup-body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+    .dn-ai-popup-features { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+    .dn-ai-popup-features span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(10,102,194,0.08);
+      color: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dn-ai-popup-actions { display: flex; gap: 0.8rem; margin-top: 1.1rem; }
+    .dn-ai-popup-apply {
+      flex: 1;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 50px;
+      transition: transform 0.2s, filter 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .dn-ai-popup-apply:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .dn-ai-popup-cancel {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .dn-ai-popup-cancel:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Floating launcher to reopen the popup */
+    .dn-ai-launcher {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      z-index: 9000;
+      background: linear-gradient(135deg, #f5c542 0%, #f0a500 100%);
+      color: #0b1f33;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(245,197,66,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .dn-ai-launcher:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,197,66,0.55); }
+
+    /* Back to top */
+    .dn-back-top {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(90px);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 8000;
+      box-shadow: 0 8px 20px var(--accent-glow);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dn-back-top.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    @media (max-width: 520px) {
+      .dn-ai-popup-media img { height: 170px; }
+      .dn-ai-popup-actions { flex-direction: column; }
+      .dn-ai-launcher { left: 16px; bottom: 16px; padding: 0.6rem 0.9rem; }
+    }
+  </style>
+
+  <div class="dn-ai-popup" id="dnAiPopup" role="dialog" aria-modal="true" aria-labelledby="dnAiPopupTitle">
+    <div class="dn-ai-popup-card">
+      <button class="dn-ai-popup-close" id="dnAiPopupClose" aria-label="Close">&times;</button>
+      <div class="dn-ai-popup-media">
+        <img src="assets/invest.jpg" alt="Designing With AI course">
+        <span class="dn-ai-popup-badge"><i class="fas fa-wallet"></i> â‚¦3,250 only</span>
+      </div>
+      <div class="dn-ai-popup-body">
+        <span class="dn-ai-popup-eyebrow">DN Studios Â· New Course</span>
+        <h3 id="dnAiPopupTitle">Designing With AI</h3>
+        <p>Learn to create scroll-stopping designs with AI â€” no experience needed, just your phone. Limited slots, instant WhatsApp access.</p>
+        <div class="dn-ai-popup-features">
+          <span><i class="fas fa-users"></i> 30 slots available</span>
+          <span><i class="fas fa-bolt"></i> 24-48h delivery</span>
+        </div>
+        <div class="dn-ai-popup-actions">
+          <a href="designing-with-ai.html" class="dn-ai-popup-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+          <button class="dn-ai-popup-cancel" id="dnAiPopupCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="dn-ai-launcher" id="dnAiLauncher" aria-label="Designing with AI course"><i class="fas fa-robot"></i> Designing with AI</button>
+
+  <button class="dn-back-top" id="dnBackTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    (function() {
+      // AI Course Popup
+      var popup = document.getElementById('dnAiPopup');
+      var launcher = document.getElementById('dnAiLauncher');
+      var closeBtn = document.getElementById('dnAiPopupClose');
+      var cancelBtn = document.getElementById('dnAiPopupCancel');
+      var KEY = 'dn_ai_popup_seen';
+      function showPopup() { if (popup) { popup.classList.add('show'); document.body.style.overflow = 'hidden'; } }
+      function hidePopup() {
+        if (!popup) return;
+        popup.classList.remove('show');
+        document.body.style.overflow = '';
+        try { sessionStorage.setItem(KEY, '1'); } catch(e) {}
+      }
+      if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+      if (cancelBtn) cancelBtn.addEventListener('click', hidePopup);
+      if (popup) popup.addEventListener('click', function(e) { if (e.target === popup) hidePopup(); });
+      if (launcher) launcher.addEventListener('click', showPopup);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popup && popup.classList.contains('show')) hidePopup(); });
+      var dismissed = false;
+      try { dismissed = sessionStorage.getItem(KEY) === '1'; } catch(e) {}
+      if (!dismissed) setTimeout(showPopup, 1800);
+
+      // Back to top
+      var backTop = document.getElementById('dnBackTop');
+      if (backTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) backTop.classList.add('show');
+          else backTop.classList.remove('show');
+        }, { passive: true });
+        backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
       }
     })();
   </script>

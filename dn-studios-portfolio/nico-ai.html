@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ───── RESET & VARIABLES ───────────────────────────────── */
+    /* â”€â”€â”€â”€â”€ RESET & VARIABLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
@@ -48,7 +48,7 @@
       transition: background 0.3s, color 0.3s;
     }
     
-    /* ───── TYPOGRAPHY ───────────────────────────────────────── */
+    /* â”€â”€â”€â”€â”€ TYPOGRAPHY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     h1, h2, h3, h4, .logo, .nav-link {
       font-family: var(--font-head);
     }
@@ -78,7 +78,7 @@
       .section-header h2 { font-size: 2rem; }
     }
     
-    /* ───── NAVBAR ───────────────────────────────────────────── */
+    /* â”€â”€â”€â”€â”€ NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .navbar {
       position: fixed;
       top: 0;
@@ -136,6 +136,10 @@
       justify-content: center;
       transition: all 0.2s;
     }
+    .theme-toggle img { width: 18px; height: 18px; }
+    .theme-toggle .icon-moon { display: none; }
+    body.light .theme-toggle .icon-moon { display: inline-block; }
+    body.light .theme-toggle .icon-sun { display: none; }
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -187,7 +191,7 @@
       border-bottom: 1px solid var(--border);
     }
     
-    /* ───── HERO ─────────────────────────────────────────────── */
+    /* â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -244,7 +248,7 @@
       .hero h1 { font-size: 2.8rem; }
     }
     
-    /* ───── SECTIONS ─────────────────────────────────────────── */
+    /* â”€â”€â”€â”€â”€ SECTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     section {
       padding: 5rem 2rem;
       max-width: 1400px;
@@ -445,7 +449,10 @@
       <a href="#services" class="nav-link">Services</a>
       <a href="#whyus" class="nav-link">Why Us</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="designing-with-ai.html" class="nav-link">AI Design</a>
+      <a href="faqs.html" class="nav-link">FAQs</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><img class="icon-moon" src="assets/icon_moon.svg" alt="Dark mode"><img class="icon-sun" src="assets/icon_sun.svg" alt="Light mode"></button>
       <a href="https://wa.me/2349045217063" class="hire-btn" target="_blank">Hire Us</a>
     </div>
     <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
@@ -459,8 +466,11 @@
   <a href="#services">Services</a>
   <a href="#whyus">Why Us</a>
   <a href="#contact">Contact</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="designing-with-ai.html">AI Design</a>
+  <a href="faqs.html">FAQs</a>
   <a href="https://wa.me/2349045217063" target="_blank">Hire Us</a>
-  <button class="theme-toggle" id="mobileThemeToggle"><i class="fas fa-moon"></i> Toggle Theme</button>
+  <button class="theme-toggle" id="mobileThemeToggle"><img class="icon-moon" src="assets/icon_moon.svg" alt="Dark mode"><img class="icon-sun" src="assets/icon_sun.svg" alt="Light mode"> Toggle Theme</button>
 </div>
 <div class="drawer-overlay" id="drawerOverlay"></div>
 
@@ -485,12 +495,12 @@
   </div>
   <div class="grid-2col">
     <div class="about-text">
-      <p>Welcome to DN Studios — a creative design studio built to help businesses, brands, and individuals show up powerfully through visual design. We believe that great design is more than just looking good. It's about making people stop, pay attention, and take action. Every project we take on is approached with that standard in mind.</p>
-      <p style="margin-top: 1rem;">Whether you're a startup finding your identity, an established brand refreshing your look, or an individual promoting an event or service — DN Studios delivers designs that are clean, professional, and built to convert.</p>
+      <p>Welcome to DN Studios â€” a creative design studio built to help businesses, brands, and individuals show up powerfully through visual design. We believe that great design is more than just looking good. It's about making people stop, pay attention, and take action. Every project we take on is approached with that standard in mind.</p>
+      <p style="margin-top: 1rem;">Whether you're a startup finding your identity, an established brand refreshing your look, or an individual promoting an event or service â€” DN Studios delivers designs that are clean, professional, and built to convert.</p>
     </div>
     <div class="founder-card">
       <h3 style="color: var(--accent-gold); margin-bottom: 1rem;">Who We Are</h3>
-      <p><strong>DN Studios</strong> was founded by <strong>Nicodemus Emmanuel</strong>, a graphic designer and visual brand strategist with hands-on experience working with clients across multiple industries — from real estate and food, to entertainment, ministry, and lifestyle brands.</p>
+      <p><strong>DN Studios</strong> was founded by <strong>Nicodemus Emmanuel</strong>, a graphic designer and visual brand strategist with hands-on experience working with clients across multiple industries â€” from real estate and food, to entertainment, ministry, and lifestyle brands.</p>
       <p style="margin-top: 1rem; font-style: italic;">"We are passionate about creativity, fast delivery, and designs that actually work for your business."</p>
     </div>
   </div>
@@ -520,10 +530,10 @@
     <h2>Why DN Studios?</h2>
   </div>
   <div class="grid-4col">
-    <div class="card"><div class="emoji">⚡</div><h3>Fast Turnaround</h3><p>Designs delivered in 24–48 hours without compromising quality.</p></div>
-    <div class="card"><div class="emoji">🎯</div><h3>Conversion-Focused</h3><p>Every element crafted to attract and convert.</p></div>
-    <div class="card"><div class="emoji">✅</div><h3>Custom & Tailored</h3><p>No templates. Every design built from scratch for you.</p></div>
-    <div class="card"><div class="emoji">🤝</div><h3>Reliable & Communicative</h3><p>We show up, meet deadlines, and keep you informed.</p></div>
+    <div class="card"><div class="emoji">âš¡</div><h3>Fast Turnaround</h3><p>Designs delivered in 24â€“48 hours without compromising quality.</p></div>
+    <div class="card"><div class="emoji">ðŸŽ¯</div><h3>Conversion-Focused</h3><p>Every element crafted to attract and convert.</p></div>
+    <div class="card"><div class="emoji">âœ…</div><h3>Custom & Tailored</h3><p>No templates. Every design built from scratch for you.</p></div>
+    <div class="card"><div class="emoji">ðŸ¤</div><h3>Reliable & Communicative</h3><p>We show up, meet deadlines, and keep you informed.</p></div>
   </div>
 </section>
 
@@ -544,7 +554,7 @@
 
 <!-- Footer -->
 <footer>
-  <p>© 2026 DN STUDIOS — Premium Creative Design Solutions</p>
+  <p>Â© 2026 DN STUDIOS â€” Premium Creative Design Solutions</p>
   <button class="privacy-link" id="privacyBtn">Privacy Policy</button>
 </footer>
 
@@ -571,7 +581,7 @@
 <div id="dn-chat-window">
   <div style="padding: 1rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
     <strong><i class="fas fa-robot" style="color: var(--accent-gold);"></i> DN Studios Assistant</strong>
-    <button id="closeChatBtn" style="background: none; border: none; color: var(--text); cursor: pointer;">✕</button>
+    <button id="closeChatBtn" style="background: none; border: none; color: var(--text); cursor: pointer;">âœ•</button>
   </div>
   <div id="chatMessages" style="flex:1; overflow-y: auto; padding: 1rem; min-height: 300px; display: flex; flex-direction: column; gap: 0.75rem;">
     <div style="background: var(--surface); padding: 0.75rem; border-radius: 16px; max-width: 85%;"><i class="fas fa-gem" style="color: var(--accent-gold);"></i> Hi! I'm the DN Studios Assistant. Ask me about services, turnaround time, or pricing!</div>
@@ -592,11 +602,6 @@
     if (theme === 'light') document.body.classList.add('light');
     else document.body.classList.remove('light');
     localStorage.setItem('dn-theme', theme);
-    const icon = themeToggle.querySelector('i');
-    if (icon) {
-      if (theme === 'light') icon.className = 'fas fa-sun';
-      else icon.className = 'fas fa-moon';
-    }
   }
   
   function toggleTheme() {
@@ -686,21 +691,21 @@
   function getBotResponse(msg) {
     const lower = msg.toLowerCase();
     if (lower.includes('price') || lower.includes('cost') || lower.includes('quote') || lower.includes('how much')) {
-      return `Every brand is unique — we provide custom quotes. Nicodemus will personally discuss your needs. <a href="https://wa.me/2349045217063" style="color: var(--accent-gold);">Chat on WhatsApp</a> for a fast quote! ✨`;
+      return `Every brand is unique â€” we provide custom quotes. Nicodemus will personally discuss your needs. <a href="https://wa.me/2349045217063" style="color: var(--accent-gold);">Chat on WhatsApp</a> for a fast quote! âœ¨`;
     }
     if (lower.includes('how long') || lower.includes('turnaround') || lower.includes('delivery') || lower.includes('fast')) {
-      return `⚡ We deliver most designs in <strong>24–48 hours</strong>! Logos, flyers, social graphics — all with unlimited revisions. Start your project today!`;
+      return `âš¡ We deliver most designs in <strong>24â€“48 hours</strong>! Logos, flyers, social graphics â€” all with unlimited revisions. Start your project today!`;
     }
     if (lower.includes('service') || lower.includes('offer') || lower.includes('logo') || lower.includes('flyer')) {
-      return `We offer: Logo Design, Flyers & Posters, Brand Identity, Social Media Graphics, Product Ads, Ministry Flyers, and Custom Design. All custom-built just for you! 🎨`;
+      return `We offer: Logo Design, Flyers & Posters, Brand Identity, Social Media Graphics, Product Ads, Ministry Flyers, and Custom Design. All custom-built just for you! ðŸŽ¨`;
     }
     if (lower.includes('contact') || lower.includes('whatsapp') || lower.includes('phone') || lower.includes('reach')) {
-      return `📞 WhatsApp: 09045217063<br>📧 Email: nicodemusemmanuel305@gmail.com<br>🐦 X: @digital_nico25<br>Nicodemus replies within minutes!`;
+      return `ðŸ“ž WhatsApp: 09045217063<br>ðŸ“§ Email: nicodemusemmanuel305@gmail.com<br>ðŸ¦ X: @digital_nico25<br>Nicodemus replies within minutes!`;
     }
     if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
-      return `Hey there! 👋 I'm the DN Studios assistant. Ask me about services, pricing, turnaround time, or contact info!`;
+      return `Hey there! ðŸ‘‹ I'm the DN Studios assistant. Ask me about services, pricing, turnaround time, or contact info!`;
     }
-    return `Thanks for reaching out! For specific project details, I recommend chatting directly with Nicodemus on <a href="https://wa.me/2349045217063" style="color: var(--accent-gold);">WhatsApp</a> — he'll give you personalized guidance. Meanwhile, check out our services or ask me anything! 🙌`;
+    return `Thanks for reaching out! For specific project details, I recommend chatting directly with Nicodemus on <a href="https://wa.me/2349045217063" style="color: var(--accent-gold);">WhatsApp</a> â€” he'll give you personalized guidance. Meanwhile, check out our services or ask me anything! ðŸ™Œ`;
   }
   
   function sendMessage() {
@@ -718,7 +723,230 @@
   chatInput?.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendMessage(); } });
   
   // Add initial bot greeting
-  setTimeout(() => addMessage("Hello! I'm the DN Studios AI assistant. What can I help you with today? ✨", false), 1000);
+  setTimeout(() => addMessage("Hello! I'm the DN Studios AI assistant. What can I help you with today? âœ¨", false), 1000);
+</script>
+
+<!-- ======= AI COURSE POPUP + ENHANCEMENTS (theme-matched) ======= -->
+<style>
+  .dn-ai-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 1000001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  .dn-ai-popup.show { opacity: 1; visibility: visible; }
+  .dn-ai-popup-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background: var(--glass-bg);
+    color: var(--text);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    transform: translateY(24px) scale(0.96);
+    transition: transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1);
+  }
+  .dn-ai-popup.show .dn-ai-popup-card { transform: translateY(0) scale(1); }
+  .dn-ai-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s;
+  }
+  .dn-ai-popup-close:hover { background: rgba(0,0,0,0.6); }
+  .dn-ai-popup-media { position: relative; }
+  .dn-ai-popup-media img { width: 100%; height: 210px; object-fit: cover; display: block; }
+  .dn-ai-popup-badge {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    background: linear-gradient(135deg, #f5c542, #f0a500);
+    color: #0a0a0f;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.35rem 1rem;
+    border-radius: 40px;
+    box-shadow: 0 6px 14px rgba(245,197,66,0.4);
+  }
+  .dn-ai-popup-body { padding: 1.5rem; }
+  .dn-ai-popup-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 700;
+  }
+  .dn-ai-popup-body h3 { font-size: 1.6rem; font-weight: 800; margin: 0.35rem 0 0.5rem; }
+  .dn-ai-popup-body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+  .dn-ai-popup-features { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+  .dn-ai-popup-features span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(200,169,110,0.12);
+    color: var(--accent-gold-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dn-ai-popup-actions { display: flex; gap: 0.8rem; margin-top: 1.1rem; }
+  .dn-ai-popup-apply {
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-purple));
+    color: #0a0a0f;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .dn-ai-popup-apply:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(200,169,110,0.35); }
+  .dn-ai-popup-cancel {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .dn-ai-popup-cancel:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+  .dn-ai-launcher {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 9000;
+    background: linear-gradient(135deg, #f5c542 0%, #f0a500 100%);
+    color: #0a0a0f;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    padding: 0.7rem 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 24px rgba(245,197,66,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .dn-ai-launcher:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,197,66,0.55); }
+  .dn-back-top {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%) translateY(90px);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent-gold);
+    color: #0a0a0f;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 8000;
+    box-shadow: 0 8px 20px rgba(200,169,110,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dn-back-top.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+  @media (max-width: 520px) {
+    .dn-ai-popup-media img { height: 170px; }
+    .dn-ai-popup-actions { flex-direction: column; }
+    .dn-ai-launcher { left: 16px; bottom: 16px; padding: 0.6rem 0.9rem; }
+  }
+</style>
+
+<div class="dn-ai-popup" id="dnAiPopup" role="dialog" aria-modal="true" aria-labelledby="dnAiPopupTitle">
+  <div class="dn-ai-popup-card">
+    <button class="dn-ai-popup-close" id="dnAiPopupClose" aria-label="Close">&times;</button>
+    <div class="dn-ai-popup-media">
+      <img src="assets/invest.jpg" alt="Designing With AI course">
+      <span class="dn-ai-popup-badge"><i class="fas fa-wallet"></i> â‚¦3,250 only</span>
+    </div>
+    <div class="dn-ai-popup-body">
+      <span class="dn-ai-popup-eyebrow">DN Studios Â· New Course</span>
+      <h3 id="dnAiPopupTitle">Designing With AI</h3>
+      <p>Learn to create scroll-stopping designs with AI â€” no experience needed, just your phone. Limited slots, instant WhatsApp access.</p>
+      <div class="dn-ai-popup-features">
+        <span><i class="fas fa-users"></i> 30 slots available</span>
+        <span><i class="fas fa-bolt"></i> 24-48h delivery</span>
+      </div>
+      <div class="dn-ai-popup-actions">
+        <a href="designing-with-ai.html" class="dn-ai-popup-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+        <button class="dn-ai-popup-cancel" id="dnAiPopupCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="dn-ai-launcher" id="dnAiLauncher" aria-label="Designing with AI course"><i class="fas fa-robot"></i> Designing with AI</button>
+
+<button class="dn-back-top" id="dnBackTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+  (function() {
+    var popup = document.getElementById('dnAiPopup');
+    var launcher = document.getElementById('dnAiLauncher');
+    var closeBtn = document.getElementById('dnAiPopupClose');
+    var cancelBtn = document.getElementById('dnAiPopupCancel');
+    var KEY = 'dn_ai_popup_seen';
+    function showPopup() { if (popup) { popup.classList.add('show'); document.body.style.overflow = 'hidden'; } }
+    function hidePopup() {
+      if (!popup) return;
+      popup.classList.remove('show');
+      document.body.style.overflow = '';
+      try { sessionStorage.setItem(KEY, '1'); } catch(e) {}
+    }
+    if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+    if (cancelBtn) cancelBtn.addEventListener('click', hidePopup);
+    if (popup) popup.addEventListener('click', function(e) { if (e.target === popup) hidePopup(); });
+    if (launcher) launcher.addEventListener('click', showPopup);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popup && popup.classList.contains('show')) hidePopup(); });
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem(KEY) === '1'; } catch(e) {}
+    if (!dismissed) setTimeout(showPopup, 1800);
+
+    var backTop = document.getElementById('dnBackTop');
+    if (backTop) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) backTop.classList.add('show');
+        else backTop.classList.remove('show');
+      }, { passive: true });
+      backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
+  })();
 </script>
 </body>
 </html>

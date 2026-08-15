@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>FAQs — DN Studios | Design Questions Answered</title>
+  <title>FAQs â€” DN Studios | Design Questions Answered</title>
   <meta name="description" content="Answers to common questions about DN Studios design services, turnaround time, pricing, process, and more.">
   <!-- Google Fonts + Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -110,6 +110,10 @@
       align-items: center;
       justify-content: center;
     }
+    .theme-toggle img { width: 20px; height: 20px; }
+    .theme-toggle .icon-sun { display: none; }
+    body.dark .theme-toggle .icon-moon { display: none; }
+    body.dark .theme-toggle .icon-sun { display: inline-block; }
     .mobile-menu-btn { display: none; font-size: 1.7rem; cursor: pointer; background: none; border: none; color: var(--text-primary); }
     .header-right { display: flex; align-items: center; gap: 1rem; }
     
@@ -391,12 +395,13 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="index.html#services" class="nav-link">Services</a></li>
           <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="designing-with-ai.html" class="nav-link">AI Design</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
           <li><a href="faqs.html" class="nav-link active">FAQs</a></li>
         </ul>
       </nav>
       <div class="header-right">
-        <button class="theme-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+        <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle theme"><img class="icon-moon" src="assets/icon_moon.svg" alt="Dark mode"><img class="icon-sun" src="assets/icon_sun.svg" alt="Light mode"></button>
         <a href="https://wa.me/2349045217063" class="nav-link hire-btn" target="_blank">Hire Us</a>
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
       </div>
@@ -408,7 +413,7 @@
     <section class="faq-hero">
       <div class="container">
         <h1>Frequently Asked Questions</h1>
-        <p class="lead">Everything you need to know about working with DN Studios — from turnaround time to custom design process.</p>
+        <p class="lead">Everything you need to know about working with DN Studios â€” from turnaround time to custom design process.</p>
       </div>
     </section>
 
@@ -423,10 +428,10 @@
                 <span class="title">What services does DN Studios offer?</span>
                 <span class="meta">Logo, Brand Identity, Flyers, Social Graphics, Church Branding & more</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
-              We specialize in <strong>conversion-focused design</strong>: Logo & Brand Identity, Church & Ministry Flyers, Social Media Graphics, Event Posters, Product Ads, and full visual branding. Every design is 100% custom — no templates. Our goal is to help you show up powerfully online and offline.
+              We specialize in <strong>conversion-focused design</strong>: Logo & Brand Identity, Church & Ministry Flyers, Social Media Graphics, Event Posters, Product Ads, and full visual branding. Every design is 100% custom â€” no templates. Our goal is to help you show up powerfully online and offline.
             </div>
           </div>
 
@@ -435,12 +440,12 @@
             <button class="faq-question" aria-expanded="false">
               <div class="q-text">
                 <span class="title">How fast is your turnaround time?</span>
-                <span class="meta">24–48 hours for most projects</span>
+                <span class="meta">24â€“48 hours for most projects</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
-              ⚡ We guarantee <strong>24–48 hour delivery</strong> for standard projects like flyers, logos, and social graphics. Complex brand packages may take 3–5 days, but we always communicate a clear timeline upfront. Rush options available — just ask!
+              âš¡ We guarantee <strong>24â€“48 hour delivery</strong> for standard projects like flyers, logos, and social graphics. Complex brand packages may take 3â€“5 days, but we always communicate a clear timeline upfront. Rush options available â€” just ask!
             </div>
           </div>
 
@@ -451,7 +456,7 @@
                 <span class="title">What are your rates? How do I get a quote?</span>
                 <span class="meta">Custom pricing based on your needs</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
               Every project is unique, so we provide <strong>custom quotes</strong> after understanding your brand vision. Prices start from affordable packages for startups and scale with complexity. <a href="https://wa.me/2349045217063?text=Hi%20Nicodemus,%20I%20need%20a%20quote%20for%20design" target="_blank">Chat with Nicodemus on WhatsApp</a> for a free, no-obligation estimate.
@@ -465,7 +470,7 @@
                 <span class="title">Do you offer revisions?</span>
                 <span class="meta">Unlimited revisions until you're 100% satisfied</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
               Absolutely! Your satisfaction is our priority. We offer <strong>unlimited revisions</strong> on all designs until you love the final result. We work closely with you to refine every detail.
@@ -479,13 +484,13 @@
                 <span class="title">How do I start a project with DN Studios?</span>
                 <span class="meta">Simple 3-step process</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
               <strong>1.</strong> Reach out via WhatsApp or email with your project idea.<br>
               <strong>2.</strong> We'll discuss your brand, goals, and timeline (free consultation).<br>
-              <strong>3.</strong> After approval & deposit, we start designing — delivering within 24–48h.<br>
-              <a href="https://wa.me/2349045217063?text=Hello!%20I%20want%20to%20start%20a%20design%20project" target="_blank">Click here to start →</a>
+              <strong>3.</strong> After approval & deposit, we start designing â€” delivering within 24â€“48h.<br>
+              <a href="https://wa.me/2349045217063?text=Hello!%20I%20want%20to%20start%20a%20design%20project" target="_blank">Click here to start â†’</a>
             </div>
           </div>
 
@@ -496,10 +501,10 @@
                 <span class="title">Do you design for churches and ministries?</span>
                 <span class="meta">Specialized church branding & event flyers</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
-              Yes! DN Studios has deep experience with <strong>church & ministry design</strong> — from convention flyers, worship night posters, sermon series graphics, to complete church visual identity. We understand the heart behind ministry communication.
+              Yes! DN Studios has deep experience with <strong>church & ministry design</strong> â€” from convention flyers, worship night posters, sermon series graphics, to complete church visual identity. We understand the heart behind ministry communication.
             </div>
           </div>
 
@@ -510,7 +515,7 @@
                 <span class="title">What file formats will I receive?</span>
                 <span class="meta">PNG, JPG, PDF, source files (AI/PSD) on request</span>
               </div>
-              <span class="chevron" aria-hidden="true">▼</span>
+              <span class="chevron" aria-hidden="true">â–¼</span>
             </button>
             <div class="faq-answer">
               You'll receive high-resolution print-ready files (PDF, JPG, PNG) and optimized web formats. Editable source files (Illustrator, Photoshop, Canva) are available upon request. We ensure you have everything you need for both print and digital use.
@@ -520,7 +525,7 @@
           <!-- Extra CTA inside FAQ -->
           <div class="faq-cta">
             <h3>Still have questions?</h3>
-            <p>Nicodemus is online and ready to help — typically replies within minutes.</p>
+            <p>Nicodemus is online and ready to help â€” typically replies within minutes.</p>
             <a href="https://wa.me/2349045217063?text=Hi%20Nicodemus,%20I%20have%20a%20question%20about%20DN%20Studios" class="cta-wa-btn" target="_blank">
               <i class="fab fa-whatsapp fa-lg"></i> Ask on WhatsApp
             </a>
@@ -536,8 +541,8 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-copyright">
-          <p>© 2025 DN Studios — Design by <strong>Nicodemus Emmanuel</strong></p>
-          <p>© 2026 <strong>Prosper Technologies</strong> | <a href="tel:09034388861" class="phone-link"><i class="fas fa-phone-alt"></i> 0903 438 8861</a></p>
+          <p>Â© 2025 DN Studios â€” Design by <strong>Nicodemus Emmanuel</strong></p>
+          <p>Â© 2026 <strong>Prosper Technologies</strong> | <a href="tel:09034388861" class="phone-link"><i class="fas fa-phone-alt"></i> 0903 438 8861</a></p>
           <div class="footer-tagline"><i class="fas fa-quote-left"></i> Designs that actually work for your business</div>
         </div>
         <div class="footer-social">
@@ -551,7 +556,7 @@
       <div class="footer-bottom">
         <div class="footer-heart">
           <span>Crafted with</span> <i class="fas fa-heart heart-icon"></i> <span>for exceptional digital experiences</span>
-          <span class="footer-year">✦ 2025-2026 ✦</span>
+          <span class="footer-year">âœ¦ 2025-2026 âœ¦</span>
         </div>
       </div>
     </div>
@@ -565,11 +570,9 @@
       function setTheme(theme) {
         if(theme === 'dark') {
           body.classList.add('dark');
-          if(toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
           localStorage.setItem('dn_theme', 'dark');
         } else {
           body.classList.remove('dark');
-          if(toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
           localStorage.setItem('dn_theme', 'light');
         }
       }
@@ -608,6 +611,229 @@
       if(mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => navLinks.classList.toggle('show-nav'));
         document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('show-nav')));
+      }
+    })();
+  </script>
+
+  <!-- ======= AI COURSE POPUP + ENHANCEMENTS ======= -->
+  <style>
+    .dn-ai-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 1000001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .dn-ai-popup.show { opacity: 1; visibility: visible; }
+    .dn-ai-popup-card {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1);
+    }
+    .dn-ai-popup.show .dn-ai-popup-card { transform: translateY(0) scale(1); }
+    .dn-ai-popup-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .dn-ai-popup-close:hover { background: rgba(0,0,0,0.6); }
+    .dn-ai-popup-media { position: relative; }
+    .dn-ai-popup-media img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .dn-ai-popup-badge {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      box-shadow: 0 6px 14px rgba(37,211,102,0.4);
+    }
+    .dn-ai-popup-body { padding: 1.5rem; }
+    .dn-ai-popup-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .dn-ai-popup-body h3 { font-size: 1.6rem; font-weight: 800; margin: 0.35rem 0 0.5rem; }
+    .dn-ai-popup-body p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+    .dn-ai-popup-features { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+    .dn-ai-popup-features span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(10,102,194,0.08);
+      color: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dn-ai-popup-actions { display: flex; gap: 0.8rem; margin-top: 1.1rem; }
+    .dn-ai-popup-apply {
+      flex: 1;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 50px;
+      transition: transform 0.2s, filter 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .dn-ai-popup-apply:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .dn-ai-popup-cancel {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .dn-ai-popup-cancel:hover { border-color: var(--accent); color: var(--accent); }
+    .dn-ai-launcher {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      z-index: 9000;
+      background: linear-gradient(135deg, #f5c542 0%, #f0a500 100%);
+      color: #0b1f33;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(245,197,66,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .dn-ai-launcher:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,197,66,0.55); }
+    .dn-back-top {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(90px);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 8000;
+      box-shadow: 0 8px 20px var(--accent-glow);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dn-back-top.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    @media (max-width: 520px) {
+      .dn-ai-popup-media img { height: 170px; }
+      .dn-ai-popup-actions { flex-direction: column; }
+      .dn-ai-launcher { left: 16px; bottom: 16px; padding: 0.6rem 0.9rem; }
+    }
+  </style>
+
+  <div class="dn-ai-popup" id="dnAiPopup" role="dialog" aria-modal="true" aria-labelledby="dnAiPopupTitle">
+    <div class="dn-ai-popup-card">
+      <button class="dn-ai-popup-close" id="dnAiPopupClose" aria-label="Close">&times;</button>
+      <div class="dn-ai-popup-media">
+        <img src="assets/invest.jpg" alt="Designing With AI course">
+        <span class="dn-ai-popup-badge"><i class="fas fa-wallet"></i> â‚¦3,250 only</span>
+      </div>
+      <div class="dn-ai-popup-body">
+        <span class="dn-ai-popup-eyebrow">DN Studios Â· New Course</span>
+        <h3 id="dnAiPopupTitle">Designing With AI</h3>
+        <p>Learn to create scroll-stopping designs with AI â€” no experience needed, just your phone. Limited slots, instant WhatsApp access.</p>
+        <div class="dn-ai-popup-features">
+          <span><i class="fas fa-users"></i> 30 slots available</span>
+          <span><i class="fas fa-bolt"></i> 24-48h delivery</span>
+        </div>
+        <div class="dn-ai-popup-actions">
+          <a href="designing-with-ai.html" class="dn-ai-popup-apply">Apply Now <i class="fas fa-arrow-right"></i></a>
+          <button class="dn-ai-popup-cancel" id="dnAiPopupCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="dn-ai-launcher" id="dnAiLauncher" aria-label="Designing with AI course"><i class="fas fa-robot"></i> Designing with AI</button>
+
+  <button class="dn-back-top" id="dnBackTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    (function() {
+      var popup = document.getElementById('dnAiPopup');
+      var launcher = document.getElementById('dnAiLauncher');
+      var closeBtn = document.getElementById('dnAiPopupClose');
+      var cancelBtn = document.getElementById('dnAiPopupCancel');
+      var KEY = 'dn_ai_popup_seen';
+      function showPopup() { if (popup) { popup.classList.add('show'); document.body.style.overflow = 'hidden'; } }
+      function hidePopup() {
+        if (!popup) return;
+        popup.classList.remove('show');
+        document.body.style.overflow = '';
+        try { sessionStorage.setItem(KEY, '1'); } catch(e) {}
+      }
+      if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+      if (cancelBtn) cancelBtn.addEventListener('click', hidePopup);
+      if (popup) popup.addEventListener('click', function(e) { if (e.target === popup) hidePopup(); });
+      if (launcher) launcher.addEventListener('click', showPopup);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && popup && popup.classList.contains('show')) hidePopup(); });
+      var dismissed = false;
+      try { dismissed = sessionStorage.getItem(KEY) === '1'; } catch(e) {}
+      if (!dismissed) setTimeout(showPopup, 1800);
+
+      var backTop = document.getElementById('dnBackTop');
+      if (backTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 400) backTop.classList.add('show');
+          else backTop.classList.remove('show');
+        }, { passive: true });
+        backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
       }
     })();
   </script>
